@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="car" class="Car" autowire="byName">
+        <property name="name" value="swift" />
+        <property name="speed" value="35" />
+
+    </bean>
+
+    <bean id="engine" class="Engine">
+        <property name="displacement" value="1300" />
+        <property name="horsepower" value="74.5" />
+        <property name="fuel" value="Diesel" />
+    </bean>
+
+    <bean id="gearbox" class="Gearbox">
+        <property name="numberOfGears" value="5" />
+        <property name="type" value="Manual" />
+    </bean>
+
+    <bean id="body" class="Body">
+        <property name="seatingCapacity" value="4" />
+        <property name="chassis" value="monocoque" />
+        <property name="composition" value="Steel" />
+    </bean>
+
+</beans>
